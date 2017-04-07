@@ -1,0 +1,65 @@
+* {margin: 0px; padding: 0px; font-family: Arial; font-size: 12px;}
+
+p {margin: 3px 0px;}
+
+.wrapper {width: 960px; margin: 0px auto;}
+
+#header {border-bottom: solid 2px #BD1C1C; margin-bottom: 20px; padding: 10px;}
+#header h1 {font-size: 16px; margin: 5px 0px;}
+
+#content {}
+#content form div.field {margin-bottom: 5px; clear: both;}
+#content form div.field label {width: 100px; float: left; text-align: right; margin-right: 10px;}
+#content form div.field input {width: 150px; float: left; text-align: left;}
+#content form div input#add-new-show {width: 25px; margin-left: 10px;}
+#content form div select#occupation {width: 150px; float: left;}
+div#add-new-subform {position: absolute; display: none; z-index: 100; background-color: #fff; border: solid 1px #000; padding: 15px;}
+div#cover {position: fixed; width: 100%; height: 100%; z-index: 99; background-color: #000000; -moz-opacity: 0.7; opacity: 0.7; filter: alpha(opacity=70);}
+
+div#submit{clear: both;}
+
+#footer {border-top: solid 2px #BD1C1C; margin-top: 20px; padding: 10px;}
+
+#cal_img {
+    float: left;
+}
+
+#cal_content {
+    float: right;
+}
+body {
+    margin: 10px;
+}
+.field {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 200px;
+}
+#dialog fieldset input[type=checkbox]{
+    float: none;
+    width: 0px;
+}
+fieldset input,.zl span{
+    float: right;
+    width: 50px;
+}
+
+input#mm:checked ~ fieldset.cm .field:before {
+    content: "mm";
+}
+fieldset.cm .field:before {
+    color: #9da0a4;
+    content: "cm";
+    float: right;
+    padding: 0 4px;
+}
+
+input#mm:checked ~ fieldset.cm .field.zl:before,fieldset.cm  .field.zl:before, .field:before  {
+    color: #9da0a4;
+    content: "zł";
+    float: right;
+    padding: 0 4px;
+}
+table td {
+    text-align: center;
+}

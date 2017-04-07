@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Dialog - Default functionality</title>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="ciemnosc.css">
+</head>
+<body>
+
+<h1>Dane do kalkulatora</h1>
+<label for="mm">wymiary w milimetrach</label>
+<input type="checkbox" checked id="mm" />
+<br><br>
+<fieldset class="cm" >
+    <legend>Dane płyty</legend>
+
+    Wymiary całej płyty
+    <div class="field">
+        <label for="c_x">szerokość</label>
+        <input type="text" id="plyta_x" value="2070" />
+    </div>
+    <div class="field">
+        <label for="c_x">długość</label>
+        <input type="text" id="plyta_y" value="2800" />
+    </div>
+
+    <div class="field" style="display: none;">
+        <label for="occupation">układ słoi</label>
+        <select name="occupation" id="occupation">
+            <option>pionowo</option>
+            <option>poziomo</option>
+        </select>
+    </div>
+
+    <br>
+    <div class="field zl">
+        <label for="plyta_c">Cena za płyte</label>
+        <input type="text" id="plyta_c" value="106.74" />
+    </div>
+    <div class="field zl"> Cena za m2: <span id="c_m2">11</span></div>
+</fieldset>
+
+<fieldset id="okleina">
+    <legend>Oklejina na obrzeże</legend>
+
+    Cena za mb
+    <span class="ui-icon ui-icon-info" title="Metr Bierzący"></span>
+
+    <div class="field">
+        <label for="okleina_1">Taśma obrzeżowa</label>
+        <input type="number" id="okleina_1">
+    </div>
+    <div class="field">
+        <label for="okleina_2">ABS</label>
+        <input type="number" id="okleina_2">
+    </div>
+    <div class="field">
+        <label for="okleina_3">Laminat</label>
+        <input type="number" id="okleina_3">
+    </div>
+    <div class="field">
+        <label for="okleina_4">fornir </label>
+        <input type="number" id="okleina_4">
+    </div>
+    <div class="field">
+        <label for="okleina_5">PCV 0,6 </label>
+        <input type="number" id="okleina_5">
+    </div>
+    <div class="field">
+        <label for="okleina_6">PCV 1,0 </label>
+        <input type="number" id="okleina_6">
+    </div>
+    <div class="field">
+        <label for="okleina_7">PCV 2,0 </label>
+        <input type="number" id="okleina_7">
+    </div>
+    <hr>
+    <!--</select>-->
+
+</fieldset>
+
+
+<fieldset style="display: none;" >
+    <legend>Robocizna</legend>
+</fieldset>
+
+
+<div id="dialog" title="Kalkulator" style="display: none;">
+    <p>
+    <fieldset class="cm">
+    <div id="cal_img">
+        <table>
+            <tr>
+                <td colspan="3">
+                <input type="checkbox" title="okleina po tej stronie">
+            </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" title="okleina po tej stronie" value="bok"></td>
+                <td><img src="front-merano.png"></td><td>
+                <input type="checkbox" title="okleina po tej stronie" value="bok"></td></tr>
+            <tr><td colspan="3"><input type="checkbox" title="okleina po tej stronie"></td> </tr>
+        </table>
+
+    </div>
+    <div id="cal_content" >
+        <fieldset class="cm"><legend> Wymiary</legend>
+            <div class="field">
+                <label for="formatka_x">wysokość</label>
+                <input type="number" id="formatka_x" >
+            </div>
+            <div class="field">
+                <label for="formatka_y">szerokość</label>
+                <input type="number" id="formatka_y">
+            </div>
+        </fieldset>
+        <div class="field zl">
+            <label for="formatka_c">Cena</label>
+            <input type="text" disabled id="formatka_c">
+        </div>
+        <fieldset><legend> Okleina </legend>
+            <label for="okleina_select"> typ oklejiny</label>
+            <select id="okleina_select">
+                <option>taśma obrzeżowa</option>
+                <option>ABS</option>
+                <option>PCV 0,6 </option>
+                <option>PCV 1,0 </option>
+                <option>PCV 2,0 </option>
+            </select>
+            <div class="field">
+                <label for="okleina_dlugosc">długość</label>
+                <input type="text" disabled id="okleina_dlugosc">
+            </div>
+        </fieldset>
+        <div class="field">
+            <label for="okleina_cena">Cena</label>
+            <input type="text" disabled id="okleina_cena"></div>
+
+    </div>
+</fieldset>
+    </p>
+</div>
+
+<button id="kalkulator">Kalkulator <span class="ui-icon ui-icon-calculator"></span></button>
+<script src="main.js"></script>
+</body>
+</html>

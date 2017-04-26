@@ -1,0 +1,195 @@
+#kfdf_kalkulatorElement{
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*background-color: #ff0000;*/
+    display: table;
+    border-right: 1px double #000000;
+}
+
+#kfdf_kalkulatorElement .tr{
+    display: table-row;
+}
+#kfdf_kalkulatorElement .ftr .td{
+    border: 0px;
+    border-top: 1px double #000000;
+    width: 20%;
+}
+#kfdf_kalkulatorElement .ftr .td:last-child{
+    border-left: 1px double #000000;
+    border-bottom: 1px double #000000;
+}
+#kfdf_kalkulatorElement .td{
+    display: table-cell;
+    /*padding: 4px;*/
+    border-top: 1px double #000000;
+    border-left: 1px double #000000;
+    position: relative;
+}
+
+#kfdf_kalkulatorElement .htr{
+    display: table-row;
+}
+#kfdf_kalkulatorElement .ftr{
+    display: table-row;
+}
+#kfdf_checkbox{
+    display: table-caption;
+
+}
+.kfdf_input_checkbox{
+
+}
+ /* pole cm / mm */
+input.kfdf_input_checkbox[type="checkbox"] + .kfdf_label_checkbox::before {
+      background-color: #fafafa;
+      border: 1px solid #c8c8c8;
+      border-radius: 0;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      color: #32a3ce;
+      content: " ";
+      cursor: pointer;
+      display: inline-block;
+      font-family: fontAwesome;
+      font-weight: normal;
+      height: 16px;
+      line-height: 14px;
+      margin-right: 1px;
+      min-width: 16px;
+      position: relative;
+      text-align: center;
+      top: -1px;
+  }
+input.kfdf_input_checkbox[type="checkbox"] + .kfdf_label_checkbox::after {
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
+    color: #aaa;
+    content: "III";
+    font-family: "Open Sans";
+    font-weight: normal;
+    height: 22px;
+    left: 3px;
+    letter-spacing: 0;
+    line-height: 22px;
+    position: absolute;
+    text-align: center;
+    text-shadow: none;
+    top: -2px;
+    transition: left 0.3s ease 0s;
+    width: 22px;
+}
+/*ustawienia suwaga*/
+input.kfdf_input_checkbox[type="checkbox"] + .kfdf_label_checkbox {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 20px;
+    margin: 0;
+    min-height: 18px;
+    min-width: 18px;
+    position: relative;
+}
+
+input.kfdf_input_checkbox[type="checkbox"] + .kfdf_label_checkbox::before{
+    background-color: #8b9aa3;
+    border: 1px solid #8b9aa3;
+    border-radius: 12px;
+    box-shadow: none;
+    color: #fff;
+    content: "cm           mm";
+    display: inline-block;
+    height: 24px;
+    line-height: 21px;
+    overflow: hidden;
+    position: relative;
+    text-indent: -2px;
+    text-shadow: 0 0 0 #fff;
+    transition: all 0.3s ease 0s;
+    width: 57px;
+}
+/* polezenie suwaka mm*/
+input.kfdf_input_checkbox[type="checkbox"] + .kfdf_label_checkbox::after {
+    background-color: #fff;
+    color: #939393;
+    content: "III";
+    height: 20px;
+    left: 2px;
+    letter-spacing: 0;
+    line-height: 19px;
+    position: absolute;
+    text-shadow: none !important;
+    top: 2px;
+    transition: all 0.3s ease 0s;
+    width: 20px;
+}
+input.kfdf_input_checkbox[type="checkbox"]{
+    width: 60px;
+    height: 25px;
+}
+label input.kfdf_input_checkbox[type="checkbox"]{
+     height: 0 !important;
+     position: fixed;
+     width: 0 !important;
+     z-index: -100 !important;
+ }
+input.kfdf_input_checkbox[type="checkbox"] {
+      cursor: pointer;
+      height: 18px;
+      opacity: 0;
+      position: absolute;
+      width: 18px;
+      z-index: 1;
+  }
+/*label {
+    font-weight: bold;
+}*/
+input.kfdf_input_checkbox[type="checkbox"]:checked + .kfdf_label_checkbox::before {
+    background-color: #8ab2c9;
+    border-color: #6a8ca8;
+    color: #fff;
+    text-indent: 0px;
+    text-shadow: 0 0 0 #fff;
+}
+
+input.kfdf_input_checkbox[type="checkbox"]:checked + .kfdf_label_checkbox::after {
+     background-color: #fff;
+     color: #98a0a5;
+     left: 33px;
+ }
+#kfdf_checkbox div{
+    float: left;
+    margin-right: 4px;
+}
+
+#kfdf_kalkulatorElement .ftr .td:last-child,
+#kfdf_kalkulatorElement .tr .td:last-child{
+    /*text-align: center;*/
+    padding-left: 4px;
+    vertical-align: middle;
+}
+
+#kfdf_kalkulatorElement .tr .td input{
+    float: left;
+    padding: 0 0 0 4px;
+    width: 100%;
+}
+#kfdf_kalkulatorElement.mm .tr .td:after {
+    content: "mm";
+}
+#kfdf_kalkulatorElement .tr .td:after,
+#kfdf_kalkulatorElement .ftr .td:last-child:after {
+    color: #9da0a4;
+    content: "cm";
+    position: absolute;
+    right: 22px;
+}
+#kfdf_kalkulatorElement .tr .td:last-child:after,
+#kfdf_kalkulatorElement .ftr .td:last-child:after {
+    content: "zł";
+    /*position: static;*/
+    right: 5px;
+
+}
+#kfdf_kalkulatorElement .tr .td:nth-child(3):after {
+    content: "szt";
+}

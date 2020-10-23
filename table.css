@@ -1,0 +1,22 @@
+.table {
+    display: table;
+    table-layout: fixed;
+}
+
+.table .caption{ display: table-caption; }
+.table .thead{ display: table-header-group; }
+.table .tbody{ display: table-row-group; }
+.table .tfooter{ display: table-footer-group; }
+
+.table .tr,
+.table .thead>div,
+.table .tbody>div,
+.table .tfooter>div{ display: table-row;}
+
+.table .td,
+.table .th,
+.table .tr>div,
+.table .thead>div>div,
+.table .tbody>div>div,
+.table .tfooter>div>div{ display: table-cell; }
+

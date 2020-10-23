@@ -1,0 +1,254 @@
+.kfdf_dvi .table {
+    border-spacing: 5px;
+    text-align: center;
+}
+.kfdf_dvi .table div{
+    vertical-align: middle;
+}
+
+ .kfdf_dvi .caption div {
+    float: left;
+    margin-right: 4px;
+}
+ .kfdf_dvi .caption label {
+    float: left;
+    margin-right: 4px;
+    padding: 5px;
+     line-break: auto;
+
+}
+
+
+/*
+ skrot w pololach mm/cm , szt. , zł
+  =============================================================*/
+.table div{
+    position: relative;
+}
+.mm .tr .td:after {
+    content: "mm";
+}
+.tbody .td:last-child:after,
+.tfooter .td:last-child:after {
+    content: "zł";
+    right: 3px;
+}
+.table .tr .td:nth-child(3):after {
+    content: "szt";
+}
+
+.tfooter .td:last-child:not(:empty):after,
+.tbody .td:after{
+    position: absolute;
+}
+.tbody .td:after,
+.tfooter .td:after {
+    color: #9da0a4;
+    content: "cm";
+    right: 22px;
+}
+
+/**
+ * IF style_1
+ ============================================================= **/
+.kfdf_style_1 .table {
+    border: 1px solid;
+}
+.kfdf_style_1 input {
+    float: left;
+    padding: 0 0 0 4px;
+    width: 100%;
+}
+
+.kfdf_style_1 .td {
+    width:25%;
+}
+.kfdf_style_1 .thead div div {
+    background-color: #ccc;
+}
+.kfdf_style_1 .tbody div div {
+    background-color: #dcd2b6;
+}
+.kfdf_style_1 .tfooter div {
+    background-color: #545454;
+    color: #cccccc;
+}
+.kfdf_style_1 .caption:hover input:checked + span:after,
+.kfdf_style_1 .caption input + span:before{
+     content: "centymetrach";
+     position: absolute;
+     text-indent: 0;
+     top: 0;
+ }
+
+.kfdf_style_1 .caption:hover input + span:after,
+.kfdf_style_1 .caption input:checked + span:before{
+    border-color: #e9e9e9;
+    content: "milimetrach";
+    position: absolute;
+    text-indent: 0;
+    top: 0;
+}
+.kfdf_style_1 .caption:hover input:checked + span:after,
+.kfdf_style_1 .caption:hover input + span:after{
+    top: -20px !important;
+    /*content: "xx";*/
+}
+/**
+ * End Style_1
+ =============================================================**/
+
+/**
+ * IF Style_2
+ =============================================================**/
+.kfdf_style_2 .table {
+    border: 1px solid #dddddd;
+    color: #333333;
+    border-radius: 4px;
+}
+.kfdf_style_2 input {
+    float: left;
+    padding: 2px 0 2px 3px;
+    width: 100%;
+    text-align: center;
+}
+
+.kfdf_style_2 .td {
+    width:25%;
+}
+.kfdf_style_2 .table div {
+    line-height: 30px;
+}
+.kfdf_style_2 .thead div div {
+    background-color: #2991d6;;
+    color: #cccccc;
+    border-radius: 4px;
+}
+.kfdf_style_2 .tbody div div {
+    background-color: #e9e9e9;;
+    border-radius: 4px;
+}
+.kfdf_style_2 .tfooter div div {
+    background-color: #cccccc;
+    color: #333333;;
+    border-radius: 4px;
+}
+
+.kfdf_style_2 .tfooter .td:empty:after {
+    content: "" !important;
+}
+
+.kfdf_style_2 .caption input {
+    cursor: pointer;
+    height: 18px;
+    opacity: 0;
+    position: absolute;
+    width: 18px;
+    z-index: 1;
+}
+.kfdf_style_2 .caption input + span:before{
+    border: 1px solid #6a8ca8;
+    color: #cccccc;
+    border-radius: 4px;
+    background-color: #2991d6;
+    content: "cm";
+    position: absolute;
+    text-indent: 0;
+    top: 0;
+    width: 60px;
+}
+.kfdf_style_2 .caption input:checked + span:before{
+    border-color: #6580a8;
+    content: "mm";
+    position: absolute;
+    text-indent: 0;
+    top: 0;
+}
+/**
+ * END Style_2
+  ============================================================= **/
+/**
+ * IF style_3
+  ============================================================= **/
+.kfdf_style_3 .table {
+    border: 1px solid #dddddd;
+    color: #333333;
+    border-radius: 4px;
+}
+.kfdf_style_3 input:focus {
+    border-color: #1982c2;
+    color: #1982c2;
+    box-shadow: 0 0 12px 3px rgba(25, 130, 194, 0.70) inset;
+}
+.kfdf_style_3 input {
+    float: left;
+    padding: 2px 0 2px 3px;
+    width: 100%;
+    background-color: #fff;
+    border-color: #d5e5ee;
+    box-shadow: 0 0 12px -2px rgba(41, 145, 214, 0.43) inset;
+    color: #626262;
+    transition: 3s;
+}
+
+.kfdf_style_3 .td {
+    width:25%;
+}
+.kfdf_style_3 .table div {
+    line-height: 30px;
+}
+.kfdf_style_3 .thead div>div:hover,
+.kfdf_style_3 .tbody div>div:hover,
+.kfdf_style_3 .tfooter div>div:hover {
+    transition: all 1s ease 0s;
+    background-color: #2991d6;;
+    color: #cccccc;
+    border-radius: 4px;
+}
+.kfdf_style_3 .tbody div div {
+    background-color: #e9e9e9;;
+    border-radius: 4px;
+}
+.kfdf_style_3 .tfooter div div {
+    background-color: #cccccc;
+    color: #676767;
+    border-radius: 4px;
+}
+
+.kfdf_style_3 .tbody .td:after {
+    content: "" !important;
+}
+.kfdf_style_3 .caption input {
+    cursor: pointer;
+    height: 18px;
+    opacity: 0;
+    position: absolute;
+    width: 18px;
+    z-index: 1;
+}
+.kfdf_style_3 .caption input + span:before{
+    border-color: #6a8ca8;
+    color: #e6e6e6;
+    background-color: #5f7097;
+    content: "centymetrach";
+    position: absolute;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-indent: 0;
+    text-shadow: 1px 1px 2px #6a8ca8;
+    top: 0;
+    transition: 2s;
+    border-radius: 6px;
+}
+.kfdf_style_3 .caption input:checked + span:before{
+    border-color: #e9e9e9;
+    content: "milimetrach";
+    position: absolute;
+    text-indent: 0;
+    text-shadow: 1px 1px 2px #6a8ca8;
+    top: 0;
+}
+
+/**
+ * END style_3
+  ============================================================= **/
